@@ -1,0 +1,35 @@
+// only change code below this line
+class Microsoft {
+    constructor(name) {
+        this.name = name;
+    }
+    get cname() {
+        return this.name;
+    }
+    set cname(name) {
+        this.name = name;
+    }
+    occupation() {
+        return `${this.name} is a philanthropist!`;
+    }
+}
+
+class Facebook extends Microsoft {
+    constructor(name, age) {
+        super(name);
+        this.age = age;
+    }
+    studentAge() {
+        return `${this.name} is ${this.age}`;
+    }
+}
+let henry = new Microsoft("William Henry Gates III");
+console.log(henry.occupation());
+let elliot = new Facebook("Mark Elliot Zuckerberg", 23);
+console.log(elliot.occupation());
+console.log(elliot.studentAge());
+// Only change code above this line
+module.exports = {
+    Microsoft,
+    Facebook
+}
